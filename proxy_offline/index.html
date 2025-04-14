@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/wakeserver.js"></script>
+    <title>Lobby</title>
+
+</head>
+<body>
+    <div class="welcome">
+        <h1>Lobby - Willkommen auf kleinstueck.org</h1>
+    </div>
+    <div class="domain-cards">
+        <div class="card-proxy">
+            <p> Hauptserver - ProxMox <img id="status-proxy" class="status-proxy" src="../assets/images/offline.png" alt="Proxy-Offline"> </p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="text-container">
+        <h2>Der Proxy ist derzeit offline.<br><br>Von 0 - 6 Uhr (Mo - Fr) oder 2 - 8 Uhr (Sa + So) ist der Proxy im Soft-Off.<br>In diesem Fall kannst du ihn aufwecken.</h2>
+    </div>
+    <div class="wakeup-proxy">
+        <button onclick="wakeServer()"> Server aufwecken</button>
+    </div>
+</body>
+</html>

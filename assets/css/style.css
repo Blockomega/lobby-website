@@ -1,0 +1,147 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121213;
+
+    h1, h2, h3, h4, h5, h6, p {
+        color: #e5f4ff;
+    }
+
+    .welcome {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    .text-container {
+        margin-top: 2%;
+        margin-bottom: 1%;
+        text-align: center;
+    }
+
+    .placeholder {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    .online {
+        color: #11d100;
+    }
+
+    .offline {
+        color: #a60e00;
+    }
+
+    .domain-cards {
+        background-color: #000000;
+        border-radius: 15px;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+
+        display: flex;
+        padding: 10px;
+
+        p {
+            font-size: 30px;
+            margin-top: 5px;
+
+        }
+
+        /* Hauptserver Karte */
+        .card-proxy {
+            background-image: url("../images/server.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+        .status-proxy {
+            height: 40px;
+            position: absolute;
+            right: 10px;
+        }
+
+        /* Nextcloud Karte */
+        .card-nextcloud {
+            background-image: url("../images/cloud.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+        .status-nextcloud {
+            height: 40px;
+            position: absolute;
+            right: 10px;
+        }
+
+        /* Medien Karte */
+        .card-media {
+            background-image: url("../images/media.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+        .status-media {
+            height: 40px;
+            position: absolute;
+            right: 10px;
+        }
+
+        /* Mail Karte */
+        .card-mail {
+            background-image: url("../images/mail.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+        .status-mail {
+            height: 40px;
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    .wakeup-proxy {
+        background-color: #000000;
+        border-radius: 15px;
+        height: 50px;
+        text-align: center;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+
+        display: flex;
+        padding: 10px;
+
+        p {
+            font-size: 30px;
+            margin-top: 5px;
+
+        }
+    }
+
+    .link {
+        text-decoration: none;
+        color: #003b9e;
+    }
+
+}
+
