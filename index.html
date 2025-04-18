@@ -5,36 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weiterleitung</title>
   <script>
-    async function checkWebsite() {
-      console.log("Fehler erkannt, prüfen auf Cloudflare-Fehler...");
-
-      // Füge ein verstecktes iframe ein, um den tatsächlichen Inhalt zu prüfen
-      let iframe = document.createElement("iframe");
-      iframe.style.display = "none";
-      iframe.src = "https://www.google.com";
-      document.body.appendChild(iframe);
-
-      // Warte kurz, um den Inhalt zu prüfen
-      setTimeout(() => {
-        try {
-          let iframeDoc = iframe.contentWindow.document;
-          let bodyText = iframeDoc.body.innerText || "";
-
-          if (bodyText.includes("Cloudflare") || bodyText.includes("Error")) {
-            console.log("Cloudflare-Fehlermeldung erkannt!");
-            window.location.href = "proxy_offline/index.html";
-          } else {
-            console.log("Kein Cloudflare-Fehler gefunden, weiterleiten...");
-            window.location.href = "proxy_online/index.html";
-          }
-        } catch (iframeError) {
-          console.log("Kein Zugriff auf das iframe (möglicherweise CORS-Problem). Weiterleitung zu 'unerreichbar'.");
-          window.location.href = "proxy_offline/index.html";
+    fetch('https://status.kleinstueck.org/api/check-proxmox')
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 200) {
+	  console.log("Erfolg");
+	  window.location.href = "/proxy_online/";
+        } else {
+          window.location.href = "/proxy_offline/";
+	  console.log("Misserfolg");
         }
-      }, 3000); // Wartezeit für das Laden des iframes  console.log("Fehler erkannt, prüfen auf Cloudflare-Fehler...");
-    }
-
-    window.onload = checkWebsite;
+      })
+      .catch(err => {
+        window.location.href = "proxy_offline/";
+	console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+	console.log(err);
+      });
   </script>
 </head>
 <body>

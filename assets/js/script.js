@@ -11,7 +11,4 @@ async function checkWebsiteStatus(element, url) {
     }
 }
 
-checkWebsiteStatus("status-proxy", "https://example.com");
-checkWebsiteStatus("status-nextcloud", "https://example.com");
-checkWebsiteStatus("status-media", "https://example.com");
-checkWebsiteStatus("status-mail", "https://example.com");
+checkWebsiteStatus("status-nextcloud", "https://cloud.kleinstueck.org");
